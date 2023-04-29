@@ -8,9 +8,10 @@ const userRoute = require("./routes/userRoute");
 dotenv.config();
 
 //Mongo Connection
+MONGO_URI = 'mongodb+srv://yeasinmd6736:ymd123@cluster0.brrqz45.mongodb.net/?retryWrites=true&w=majority'
 mongoose.set("strictQuery", false);
 mongoose
-  .connect(process.env.MONGO_URI)
+  .connect(MONGO_URI)
   .then(() => console.log(`DBConnection Successfull`))
   .catch((err) => {
     console.log(err);
